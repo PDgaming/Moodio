@@ -2,12 +2,9 @@
 Building a free and open source mood tracking app.
 
 ## Problem Statement for today:
-Get Started.
+Set Up The Type System
 
 ## Task list:
-- [x] Monorepo setup
-- [x] Shared package
-- [x] Backend (API) setup
-- [x] Frontend (Web) setup
-- [x] Workspace wiring
-- [ ] Cloudflare deployment
+- [x] Core domain types
+- [x] API request/response types
+- [x] enriched and derived types

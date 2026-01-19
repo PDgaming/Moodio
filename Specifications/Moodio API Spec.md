@@ -20,15 +20,11 @@ interface User {
 ```typescript
 interface Mood {
   id: string;                    // UUID
-  userId: string;                // Owner of this mood config
   name: string;                  // "Rad", "Good", "Meh", "Bad", "Awful"
   value: number;                 // 5, 4, 3, 2, 1 (for calculations/sorting)
   color: string;                 // Hex color "#4CAF50"
   icon: string;                  // Emoji or icon identifier "😄"
   order: number;                 // Display order (1-5)
-  isDefault: boolean;            // True for system defaults, false for custom
-  createdAt: Date;
-  updatedAt: Date;
 }
 ```
 
@@ -41,7 +37,6 @@ interface Activity {
   icon: string;                  // Emoji or icon identifier "🏃"
   color: string;                 // Hex color for grouping/display
   category: string | null;       // "Health", "Social", "Work", etc.
-  isDefault: boolean;            // True for system defaults
   createdAt: Date;
   updatedAt: Date;
 }
