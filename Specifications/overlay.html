@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+
+                padding: 5px;
+
+                font-family: 'Arial', sans-serif;
+                font-size: 24px;
+                color: black;
+
+                -webkit-text-stroke-color: black;
+                -webkit-text-stroke-width: 1px;
+
+                white-space: pre-wrap;
+                overflow: hidden;
+            }
+            h1 {
+                font-size: 28px;
+                margin: 10px 0;
+                text-decoration: underline;
+            }
+            h2 {
+                font-size: 26px;
+                margin: 5px 0;
+                text-decoration: underline;
+            }
+            li {
+                margin-bottom: 5px;
+            }
+        </style>
+        </style>
+        <meta http-equiv="refresh" content="1" />
+    </head>
+    <body>
+        <div id="content"></div>
+
+        <script>
+            fetch('problem-statement.md')
+                .then(response => response.text())
+                .then(data => {
+                    const lines = data.split('\n');
+                    let finalHtml = "";
+                    let inList = false;
+
+                    lines.forEach(line => {
+                        const trimmed = line.trim();
+
+                        // Simple Header (# Heading)
+                        if (trimmed.startsWith('# ')) {
+                            if (inList) { finalHtml += "</ul>"; inList = false; }
+                            finalHtml += `<h1>${trimmed.substring(2)}</h1>`;
+                        }
+                        else if (trimmed.startsWith("## ")) {
+                          if (inList) { finalHtml += "</ul>"; inList = false; }
+                          finalHtml += `<h2>${trimmed.substring(2)}</h2>`;
+                        }
+                        // Regular Text
+                        else if (trimmed === "") {
+                            if (inList) { finalHtml += "</ul>"; inList = false; }
+                            finalHtml += "<br>";
+                        } else {
+                            if (inList) { finalHtml += "</ul>"; inList = false; }
+                            finalHtml += `<div>${trimmed}</div>`;
+                        }
+                    });
+
+                    if (inList) finalHtml += "</ul>";
+                    document.getElementById('content').innerHTML = finalHtml;
+                })
+                .catch(err => console.error("Error:", err));
+        </script>
+    </body>
+</html>
