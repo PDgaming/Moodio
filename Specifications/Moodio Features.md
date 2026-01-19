@@ -1,4 +1,4 @@
-# Moodly Clone - Feature Outline
+# Moodio Clone - Feature Outline
 
 ## Core Features
 

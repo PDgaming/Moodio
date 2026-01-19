@@ -1,4 +1,4 @@
-# Moodly Clone - API & Types Specification
+# Moodio Clone - API & Types Specification
 
 ## Type Definitions
 
@@ -245,7 +245,7 @@ interface FieldError {
 ## API Endpoints
 
 ### Base URL
-- Production: `https://Moodly-api.{username}.workers.dev`
+- Production: `https://Moodio-api.{username}.workers.dev`
 - Development: `http://localhost:8787`
 
 ### Authentication

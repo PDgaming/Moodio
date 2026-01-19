@@ -1,4 +1,4 @@
-# Moodly Clone - Build Order
+# Moodio Clone - Build Order
 
 ## Phase 1: Foundation & Data Structure
 1. **Data Storage Setup**

@@ -1,7 +1,7 @@
-# Moodly Clone - Technical Specification
+# Moodio Clone - Technical Specification
 
 ## Project Overview
-An open-source mood and habit tracking web application built as a Moodly clone, designed for personal use with offline-first capabilities and cloud sync.
+An open-source mood and habit tracking web application built as a Moodio clone, designed for personal use with offline-first capabilities and cloud sync.
 
 ## Architecture Pattern
 **Monorepo** - Single repository containing all project components with shared code and types.

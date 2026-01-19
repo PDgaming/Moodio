@@ -2,4 +2,12 @@
 Building a free and open source mood tracking app.
 
 ## Problem Statement for today:
-1. Project Initialization
+Get Started.
+
+## Task list:
+- [ ] Monorepo setup
+- [ ] Shared package
+- [ ] Backend (API) setup
+- [ ] Frontend (Web) setup
+- [ ] Workspace wiring
+- [ ] Cloudflare deployment
